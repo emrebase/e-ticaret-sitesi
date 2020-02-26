@@ -1,0 +1,23 @@
+﻿@model LuxyboxIdentity.Data.Contact
+@using System.Linq;
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<div class="control">
+    <div>Adınız:</div>
+    <input id="name" type="text" name="name" required />
+    <div>E-mail Adresiniz: </div>
+    <input id="email" type="email" name="email"/>
+    <div>Mesaj Konusu:</div>
+    <input id="subject" type="text" name="subject" />
+    <div>Mesajınız:</div>
+        <textarea id="message" name="message" cols="40" rows="5"></textarea>
+    <div>
+        <span class="error-message"></span>
+    </div>
+    <div>
+        <button id="btnsend">GÖNDER</button>
+    </div>
+</div>

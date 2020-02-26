@@ -1,0 +1,274 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.product {
+    background-color: yellow;
+}
+
+.product-row {
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    color: deeppink;
+    float: left;
+}
+
+    .product-row .product-image {
+        width: 150px;
+        height: 180px;
+    }
+
+.categorys {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-row {
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    color: deeppink;
+    float: left;
+}
+
+.category-image {
+    width: 200px;
+    height: 150px;
+}
+
+.navbar-brand {
+    color: purple !important;
+}
+
+.lux-box {
+    height: 60px;
+    width: 100px;
+}
+
+.left-categorys {
+    float:left;
+    width: 200px;
+}
+
+.right-products {
+    margin-left: 200px;
+    /* Change this to whatever the width of your left column is*/
+}
+
+
+
+
+
+
+
+.detail-left-column{
+    float:left;
+}
+
+    .detail-left-column img {
+        width: 160px;
+    }
+
+    .detail-left-column .names {
+        font-size: 26px;
+    }
+
+    .detail-left-column .author {
+        border: 1px solid gray;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        width: 210px;
+    }
+
+    .detail-left-column .publisher {
+        border: 1px solid gray;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        width: 210px;
+    }
+
+
+
+
+.detail-right-column {
+    width: 100%;
+    margin-left: 180px;
+}
+
+
+.detail-info {
+  clear:both;
+  margin-top:15px;
+}
+.btntext-center {
+    
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    width: 210px;
+    float:left;
+}
+
+.cart-list-header group{
+    border-bottom: 1px solid;
+}
+.col2 {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    width: 210px;
+    float: right;
+}
+.col1 {
+    
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    width: 210px;
+    float:right;
+   
+}
+
+
+/*.col-md-2 {
+    text-align: right;
+    font-family: Arial Rounded MT;
+    font-size: 20px;
+    color: black;
+    margin-top: 20px
+}
+.col-md-6 {
+    font-family: Arial Rounded MT;
+    font-size: 20px;
+    color: black;
+    margin-top: 20px
+}*/
+.cart-title {
+    color:mediumvioletred;
+}
+
+.product-item {
+    border-top: 1px solid lightgray;
+    padding: 10px;
+}
+
+    .product-item .product-quantity {
+        width: 50px;
+        float: none;
+        text-align: center;
+        display: inline-block;
+        margin-left: -4px;
+        margin-right: -4px;
+        border-radius: unset;
+    }
+
+    .product-item .product-image {
+        width: 55px;
+    }
+
+    .product-item .product-name {
+        font-size: 20px;
+    }
+
+
+.column-title {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+
+.cart-icon {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.cart-icon-count {
+    background-color: orangered;
+    right: -2px;
+    color: white;
+    position:absolute;
+    border-radius:50%;
+    width: 20px;
+    text-align:center;
+}
+
+.basket {
+    right: 45px;
+    width: 45px;
+}
+/*.btn-primary .btntext-center {
+    background-color: orange;
+    color: white;
+    float: right;
+}
+.list-item{
+    float:right;
+    width:50px;
+    color:green;
+}*/
+.total-price{
+    float:right;
+}
+.total-price-block {
+display:block;
+}
+.form-horizontal .control-label {
+    padding-top: 25px;
+    margin-top: -10px;
+    text-align: left;
+}
+.form-horizontal .delivery-name{
+    color:orangered;
+
+}
+.form-horizontal .contact-label {
+    padding-top: 12px;
+    margin-top: -10px;
+    text-align: left;
+    margin-bottom:20px;
+}
+.shopping .chechmark {
+    height: 80px;
+    width: 100px;
+}
+.shopping .take-order{
+    font-size:25px;
+}
+
+
+.input-required{
+    border-color:red;
+}
+
+.error-message {
+    color: red;
+    font-size: 18px;
+}
+
+.not-empty {
+    border-color: red;
+}

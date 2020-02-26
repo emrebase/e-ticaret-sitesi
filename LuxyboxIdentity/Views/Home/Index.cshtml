@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@model  LuxyboxIdentity.Models.HomeModel
+
+<h2>Category List</h2>
+    @{
+        @*<select>
+                @foreach (var category in Model.Categories)
+                {
+                    <option value="@category.Name">@category.Name</option>
+                }
+            </select>*@
+
+
+        <div class="categorys">
+
+
+            @foreach (var category in Model.Categories)
+            {
+
+                <div class="category-row">
+                    <a href="@Url.Action("Products", "Home", new { id = category.Id })">
+                        <div>
+                            <img class="category-image" src="@category.ImgUrl" />
+                            <p class="category-name">@category.Name</p>
+                        </div>
+                    </a>
+                </div>
+
+            }
+        </div>
+    }
+    <div class="clearfix"></div>
+

@@ -1,0 +1,44 @@
+﻿@using LuxyboxIdentity.Models;
+
+@model HomeModel
+
+
+@{ ViewBag.Title = "Kitaplar";}
+
+<div class="left-categorys">
+    @{
+        foreach (var category in Model.Categories)
+        {
+            <ul>
+                <li>
+                    <a href="@Url.Action("Products", "Home", new { id = category.Id})">@category.Name</a>
+                </li>
+            </ul>
+        }
+    }
+</div>
+<ul>
+    <li>
+        <a href="@Url.Action("Products", "Home")"></a>
+    </li>
+</ul>
+
+@{
+    <div class="right-products">
+        @foreach (var product in Model.Products)
+        {
+            <div class="product-row">
+                <a href="@Url.Action("Details", "Home", new { id = product.Id })">
+
+                    <img class="product-image" src="@product.ImgUrl" />
+
+                    <p class="product-name">@product.Name</p>
+                    <p class="product-price" @product.Price></p>
+                </a>
+
+            </div>
+        }
+    </div>
+}
+
+<div class="clearfix"></div>

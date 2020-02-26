@@ -1,0 +1,68 @@
+﻿@using LuxyboxIdentity.Models;
+@using System.Linq;
+@{
+    ViewBag.Title = "Cart";
+}
+@model LuxyboxIdentity.Data.Cart
+<div class="container">
+    <header class="group">
+        <h1 class="cart-title">SEPETİM</h1>
+    </header>
+    <div class="product-list">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6 column-title">Ürün Adı</div>
+            <div class="col-md-2 column-title text-right">Adet</div>
+            <div class="col-md-2 column-title text-right">Fiyat</div>
+        </div>
+
+
+        @foreach (var item in Model.CartItems)
+        {
+            <div class="row product-item" data-product-id="@item.Product.Id" data-product-price="@item.Product.Price">
+                <div class="col-md-2"><img class="product-image" src="@item.Product.ImgUrl" /></div>
+                <div class="col-md-6 product-name">
+                    <a href="/Home/Details/@item.Product.Id">@item.Product.Name</a>
+                </div>
+                <div class="col-md-2 text-center"> 
+                    <button type="button" class="btn btn-default btn-decrease">-</button>
+                    <input type="text" class="form-control product-quantity" value="@item.Quantity">
+                    <button type="button" class="btn btn-default btn-increase">+</button>
+                    <button type="button" class="btn btn-default btn-delete">x</button>
+                </div>
+                <div class="col-md-2 text-right product-price"> @(item.Product.Price * item.Quantity)</div>
+
+            </div>
+        }
+
+    </div>
+
+
+    <div class="row total-price">
+        <span class="title total-price-block">SİPARİŞ ÖZETİ</span>
+        <div class="total-price-block">
+
+            <div class="author">
+                <b>Toplam Fiyat:</b>
+                <span class="cart-total-price"></span>
+            </div>
+
+        </div>
+        <button class="btntext-center total-price-block" id="addCartBtn">
+            @Html.ActionLink("Alışverişi Tamamla", "checkorder", "Home")
+        </button>
+        <button  class="btntext-center total-price-block" id="addCartBtn">
+            @Html.ActionLink("Sepeti Boşalt", "Delete", new { id = 0 })
+        </button>
+    </div>
+    <div class="clearfix">
+
+    </div>
+
+</div>
+
+
+
+
+
+

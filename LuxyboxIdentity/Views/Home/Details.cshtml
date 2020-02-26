@@ -1,0 +1,55 @@
+﻿
+@model LuxyboxIdentity.Data.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <div class="detail-left-column">
+        <img src="@Model.ImgUrl" />
+    </div>
+
+    <div class="detail-right-column">
+        <div class="names">
+            <p>@Html.DisplayFor(model => model.Name)</p>
+        </div>
+        <p><b>@Html.DisplayFor(model => model.Price)</b></p>
+
+        <div class="author">
+            <b>YAZAR:</b>
+            <span>@Html.DisplayFor(model => model.Author)</span>
+        </div>
+
+        <div class="publisher">
+            <b>YAYINEVİ:</b>
+            <span>@Html.DisplayFor(model => model.Publisher)</span>
+        </div>
+        <div>
+          
+          
+            
+
+                <button onclick="('').val(), $('').val();" class="btntext-center" id="addCartBtn">
+
+                    @Html.ActionLink("SEPETE EKLE", "AddtoCart", "Home", new { id = Model.Id }, null)
+                </button>
+            
+                
+
+
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="detail-info">
+        <em>  @Html.DisplayFor(model => model.Info) </em>
+    </div>
+</div>
+
+
+
+<div class="clearfix"></div>
